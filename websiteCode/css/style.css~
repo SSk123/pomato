@@ -1,0 +1,1280 @@
+/*--
+Author: srishti
+License: MyCart Pvt Ltd
+--*/
+
+/*basic element style*/
+h4, h5, h6,
+h1, h2, h3 {margin-top: 0;}
+ul, ol {margin: 0;}
+p {margin: 0;}
+a:hover {
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+/*Body styling here*/
+html, body{
+  font-family: 'Lato', sans-serif;
+  font-size: 100%;  
+  width: 100%;
+  overflow-x:hidden;
+}
+
+/*BANNER Div starts here*/
+.banner {
+  background: url(../images/ban.jpg)no-repeat;
+  max-height: 700px;
+  background-size: cover;
+}
+.logoImage{ 
+  width:250px;
+  margin-top: -450px;
+  z-index: 1;
+  position: relative;
+  left: 150px;
+}
+.banner-logo{
+  display: inline-block;
+  min-width: 250px;
+  min-height: 300px;
+  border-bottom-right-radius: 200px;
+  border-bottom-left-radius: 200px;
+  background-color: rgb(194, 24, 91);
+  opacity: 0.6;
+  margin-left: -105px;
+}
+.banner-head {
+  height: 8em;
+  display: inline;
+}
+.banner-menu {
+  width: 38%;
+  float: right;
+}
+.banner-menu ul {
+	padding:0px;
+  list-style: none;
+}
+.banner-menu ul li {
+  display: inline-block;
+  float: left;
+}
+.banner-menu ul li a {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  padding: 2em 1em 2em 1em;
+  font-family: 'Dosis';
+  display:block;
+}
+.banner-menu ul li a:hover,.banner-menu ul li a.active{
+	color:#0AB2D2;
+  font-weight: 800;
+  font-family: 'Dosis';
+}
+span.menu{
+	display:none;
+}
+.banner-main {
+  text-align: center;
+  position: relative;
+}
+.storeImage{
+  padding-right: 6.5em;
+  display: inline-block;
+  width: 60%;
+}
+.storeImage h3{
+  display: block;
+  font-size: 4em;
+  font-weight: 500;
+  color: white;
+  font-family: 'Poiret One';
+}
+.storeImage img{
+  padding: 2.2em;
+}
+.storeImage img:hover{
+  opacity: 0.8;
+  z-index: 1000;
+}
+.storeImage div h4{
+  display: block;
+  font-size: 2em;
+  font-weight: 400;
+  color: #fff;
+  font-family: 'Poiret One';
+  padding-bottom: 10px;
+}
+.storeImage div input{
+  width: 220px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-color: transparent;
+  border-bottom-color: rgb(126, 166, 64);
+  font-family: 'Dosis';
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center; 
+}
+.storeImage div input:active{
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+.storeImage div button{
+  width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgb(245, 166, 35);
+  color: white;
+  font-size: 20px;
+  font-family: 'Dosis';
+  border: none;
+  font-weight: 600;
+}
+.storeImage div button:hover, .storeImage div button:active{
+  opacity: 0.8;
+}
+.appImage{
+  display: inline;
+  width: 40%;
+}
+.appImage img{
+  width: 500px;
+  height: 400px;
+  margin-top: -175px;
+}
+/*BANNER Div ends here*/
+/*BANNER-STRIP Div starts here*/
+.banner-strip {
+  background: rgb(245, 166, 35);
+  padding: 1.5em 0em 1.5em 0em;
+}
+.banner-strip .container{
+  padding-left: 100px;
+  padding-right: 125px;
+}
+.banner-strip h3 {
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #fff;
+  display: inline-block;
+  float: left;
+  font-family: 'Poiret One';
+  margin: 0.2em 0em 0em 0em;
+}
+.bann-strip-btn {
+  float: right;
+}
+.bann-strip-btn a {
+  background:#0AB2D2;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #fff;
+  padding: 0.5em 1.5em;
+  border-radius: 0px;
+  z-index: 1;
+  text-decoration: none;
+  font-family: 'Dosis';
+}
+.bann-strip-btn a:hover, .bann-strip-btn a:active {
+	opacity: 0.8;
+	color:#fff;
+}
+/*BANNER-STRIP Div ends here*/
+/*--Project start here--*/
+.project{
+  padding-bottom: 50px;
+}
+.project .container{
+  padding-right: 120px;
+  padding-left: 102px;
+}
+.project-head h3{
+  padding-top: 30px;
+  font-size: 60px;
+  font-family: 'Poiret One';
+  color: rgb(61, 63, 60);
+  font-weight: 400;
+  margin-left: 36%;
+}
+.project .container .col-md-6{
+  min-height: 300px;
+}
+.project .container .col-md-6 img{
+  width: 100px;
+  height: 100px;
+  border-radius: 999px; 
+  margin-left: 330px;
+  position: relative;
+  top:50px;
+}
+.card-main{
+  min-height: 240px;
+  border: solid;
+  border-width: thin;
+  padding: 30px;
+  font-family: 'Dosis';
+  font-size: 20px;
+  color: black
+}
+.card-main div{
+  padding: 5px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.standOut{
+  font-weight: 600;
+}
+.card-footer{
+  min-height: 60px;
+  padding: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 2em;
+  font-family: 'Poiret One';
+}
+/*--Project end here--*/
+/*aboutUs start here*/
+.aboutUs {
+  background: url(../images/aboutUs.jpg) no-repeat;
+  background-size: cover;
+  min-height: 600px;
+}
+.aboutUs .container{
+  padding-right: 120px;
+  padding-left: 102px;
+}
+#aboutUS h3{
+  padding: 30px;
+  font-size: 60px;
+  font-family: 'Poiret One';
+  margin-left: 35%;
+  font-weight: 400;
+  color: rgb(61, 63, 60);
+}
+.aboutTeam .col-md-6{
+  padding: 30px;
+}
+.aboutTeam .col-md-6 img{
+  border-radius: 999px;
+  border-style: solid;
+  border-color:black;
+  border-width:5px; 
+  width: 10em;
+  height: 10em;
+  display: block;
+  margin-left: 120px;
+  opacity: 0.6;
+}
+.aboutTeam .col-md-6 :hover{
+  opacity: 1;
+}
+.aboutTeam .col-md-6 h3{
+  font-family: 'Dosis';
+  font-weight: 800;
+  font-size: 30px;
+  color: rgb(194, 24, 91);
+  text-align: center;
+  padding: 10px 5px 5px 5px;
+}
+.aboutTeam .col-md-6 div{
+  padding: 5px 10px 5px 10px;
+  color: rgb(61, 63, 60);
+  font-family: 'Dosis';
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+.process h3{
+  padding: 30px;
+  font-size: 60px;
+  font-family: 'Poiret One';
+  margin-left: 20%;
+  display: inline-block;
+  font-weight: 400;
+  color: rgb(61, 63, 60);
+}
+.execution div span{
+  font-family: 'Dosis';
+  font-size: 30px;
+  font-weight: 400;
+  padding-right: 100px;
+  color: rgb(194, 24, 91);
+  margin-left: 125px;
+}
+.execution div  img{
+  width: 250px;
+  height: 250px;
+  padding: 30px;
+  opacity: 0.8;
+  margin-left: 50px;
+}
+.execution div  img:hover{
+  opacity: 1;
+}
+/*aboutUs end here*/
+/*contact start here*/
+.contactUs {
+  background: white;
+  min-height: 400px;
+}
+.contactUs .container{
+  padding-right: 120px;
+  padding-left: 102px;
+}
+#contactUS{
+  padding: 30px;
+  font-size: 60px;
+  font-family: 'Poiret One';
+  margin-left: 35%;
+  display: inline-block;
+  font-weight: 400;
+  color: rgb(61, 63, 60);
+}
+.contactUs .container .col-md-6{
+  padding: 50px;
+}
+.dataBox{
+  padding: 20px;
+}
+.dataEntry{
+  font-family: 'Poiret One';
+  font-size:2em;
+  font-weight: 400; 
+  color:rgb(11,178,210);
+  text-align: justify;
+}
+.dataEntry div{
+  padding: 5px 10px 10px 5px;
+  margin-left: 50px;
+  margin-right: 10px;
+  position: relative;
+  display: inline-block;
+  width: 20%;
+}
+
+.dataEntry input{
+  position: relative;
+  border-bottom: solid;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  border-width: thin;
+  border-color: rgb(11,178,210);
+  color: rgb(194, 24, 91);
+  display: inline;
+  width: 70%;
+}
+.dataEntry textarea{
+  position: relative;
+  border-width: thin;
+  border-color: rgb(11,178,210);
+  color: rgb(194, 24, 91);
+  display: inline;
+  width: 70%;
+  resize:none;
+}
+.submitButton{
+  padding: 20px;
+}
+.submitButton button{
+  width: 250px;
+  float: right;
+  background: rgb(194, 24, 91);
+  font-family: 'Dosis';
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  border:none;
+}
+.submitButton button:hover, .submitButton button:active{
+  opacity: 0.6;
+}
+/*contact end here*/
+
+/*--footer start here--*/
+.footer {
+  background: #3D3F3C;
+}
+.footer .container{
+  padding-right: 120px;
+  padding-left: 102px;
+}
+.footer-main {
+  padding: 2em 0em 2em 0em;
+}
+.footer-grid h3 {
+  font-family: "Poiret One";
+  font-size: 2.5em;
+  font-weight: 400;
+  color:rgb(11, 178, 210);
+  margin: 0px 0px 25px 0px;
+}
+.footer-grid  p {
+  font-family: 'Poiret One';
+  font-size: 1em;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.6em;
+}
+.social {
+  float: left;
+  margin-left: -3em;
+}
+.social ul {
+  margin: 2.3em 0em 0em 0em;
+  list-style: none;
+}
+.social ul li {
+  display: inline;
+  margin: 0px 10px 0px 0px;
+}
+.social ul li a {
+  background: url(../images/social-sprit.png)no-repeat;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.social ul li a.fa {
+  background-position: 5px 0px;
+}
+.social ul li a.tw {
+  background-position: -18px 0px;
+}
+.social ul li a.fa:hover {
+  background-position: 5px -25px;
+}
+.social ul li a.tw:hover {
+  background-position: -18px -25px;
+}
+
+/*--footer end here--*/
+/*--copy right start here--*/
+.copyright {
+  background: #30322F;
+  padding: 1em 0em 1em 0em;
+}
+.copyright .container h4 {
+  margin-left:30%; 
+  color: aliceblue;
+  font-size: 15px
+}
+.copyright .container div {
+  margin-left: 31%;
+}
+.copyright .container div a{
+   color: aliceblue;
+   font-size: 12px;
+} 
+/*--copy right end here--*/
+/* -----------------------*/
+/* -----------------------*/
+/* -----------------------*/
+/*--meadia quries start here--*/
+@media(max-width:768px){
+  /*banner starts here*/
+  .logoImage{ 
+    width: 100px;
+    margin-top: -100px;
+    position: relative;
+    left: 0%;
+  }
+  .banner-logo{
+    min-width: 100px;
+    min-height: 100px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;  
+  }
+  .banner-menu {
+    width: 30%;
+  }
+  .banner-menu .menu{
+    width: 50%;
+    display: inline-block;
+    padding: 20px 0px 0px 20px;
+  }
+  .banner-menu ul {
+    display: none;
+    padding:0px;
+  }
+
+  .banner-menu ul.res {
+      margin: 0em;
+      z-index: 999;
+      position: absolute;
+      width: 100%;
+      left:0;
+      opacity: 0.8;
+  }
+  .banner-menu ul.res li {
+      display: block;
+      text-align: center;
+      background:#fff;
+      margin: 0;
+  }
+  .banner-menu ul.res li a {
+      font-size: 1em;
+      padding: 4.6em;
+      color: #000;
+      display: block;
+  }
+  ul.res li a:hover,ul.res li a.active{
+    color:#0AB2D2;
+  }
+  .storeImage{
+    padding: 0px;
+  }
+  .storeImage h3{
+    font-size: 1.5em;
+  }
+  .storeImage img{
+    padding: 0.2em;
+    width: 5em;
+  }
+  .storeImage div h4{
+    font-size: 1em;
+    padding: 0px;
+  }
+  .storeImage div input{
+    width: 7em;
+    font-size: 1em;
+  }
+  .storeImage div button{
+    width: 5em;
+    font-size: 1em;
+    margin: 10px;
+  }
+  .appImage {
+    display: none;
+  }
+  /*banner ends here*/
+  /*banner-strip starts here*/
+  .banner-strip .container{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .banner-strip h3 {
+    font-size: 1em;
+    margin: 0.2em 0em 1em 0em;
+  }
+  .bann-strip-btn a {
+    font-size: 1em;
+    margin-right: 4em;
+  }
+  /*banner-strip ends here*/
+  /*project starts here*/
+  .project .container{
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  .project-head h3{
+    font-size: 2em;
+    margin-left: 9em;
+  }
+  .project .container .col-md-6 img{
+    margin-left: 1em;
+    width: 6em;
+    height: 6em;
+  }
+  /*project ends here*/
+  /*aboutUs starts here*/
+  .aboutUs .container{
+    padding-right: 1em;
+    padding-left:  1em;
+  }
+  #aboutUS h3{
+    font-size: 2em;
+    margin-left: 8em;
+  }
+  .aboutTeam .col-md-6 img{
+    width: 5em;
+    height: 5em;
+    margin-left: 18em;
+  }
+  .aboutTeam .col-md-6 h3{
+    font-size: 2em;
+  }
+  .aboutTeam .col-md-6 div{
+    font-size: 1em;
+  }
+  .process h3{
+    font-size: 1.5em;
+    margin-left: 8em;
+  }
+  .execution div span {
+    font-size: 1em;  
+    margin-left: 125px;
+    padding-right: 2em;
+  }
+  .execution div  img {
+    width: 9em;
+    height: 9em;
+    margin-left: 4em;
+  }
+  /*aboutUs ends here*/
+  /*contact starts here*/
+  .contactUs .container{
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  #contactUS{
+    font-size: 2em;
+    margin-left: 8em;
+  }
+  .contactUs .container .col-md-6{
+    padding: 50px;
+  }
+  .dataEntry{
+    font-size:1.5em;
+  }
+  .dataEntry div{
+    margin-left: 1em;
+    margin-right: 0.5em;
+    width: 4em;
+  }
+  .dataEntry input{
+    width: 18em;
+  }
+  .dataEntry textarea{
+    width: 18em;
+  }
+  .submitButton{
+    padding: 5px;
+  }
+  .submitButton button{
+    width: 15em;
+    font-size: 1em;
+  }
+  /*contact ends here*/
+  /*footer starts here*/
+  .footer .container{
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  .footer-grid h3 {
+    font-size: 1.5em;
+  }
+  .footer-grid  p {
+     font-size: 0.5em;
+  }
+   .social ul {
+    margin: 0.5em 0em 0em 0em;
+  }
+  /*--footer end here--*/
+  /*--copy right start here--*/
+  .copyright .container h4 {
+    margin-left:0em; 
+  }
+  .copyright .container div {
+    margin-left: 0em;
+  }
+  /*--copy right ends here--*/
+}
+@media(max-width:640px){
+  /*banner starts here*/
+  .logoImage{ 
+    width: 100px;
+    margin-top: -100px;
+    position: relative;
+    left: 0%;
+  }
+  .banner-logo{
+    min-width: 100px;
+    min-height: 100px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;  
+  }
+  .banner-menu {
+    width: 30%;
+  }
+  .banner-menu .menu{
+    width: 50%;
+    display: inline-block;
+    padding: 20px 0px 0px 20px;
+  }
+  .banner-menu ul {
+    display: none;
+    padding:0px;
+  }
+
+  .banner-menu ul.res {
+      margin: 0em;
+      z-index: 999;
+      position: absolute;
+      width: 100%;
+      left:0;
+      opacity: 0.8;
+  }
+  .banner-menu ul.res li {
+      display: block;
+      text-align: center;
+      background:#fff;
+      margin: 0;
+  }
+  .banner-menu ul.res li a {
+      font-size: 1em;
+      padding: 3.6em;
+      color: #000;
+      display: block;
+  }
+  ul.res li a:hover,ul.res li a.active{
+    color:#0AB2D2;
+  }
+  .storeImage{
+    padding: 0px;
+  }
+  .storeImage h3{
+    font-size: 1.5em;
+  }
+  .storeImage img{
+    padding: 0.2em;
+    width: 5em;
+  }
+  .storeImage div h4{
+    font-size: 1em;
+    padding: 0px;
+  }
+  .storeImage div input{
+    width: 7em;
+    font-size: 1em;
+  }
+  .storeImage div button{
+    width: 5em;
+    font-size: 1em;
+    margin: 10px;
+  }
+  .appImage {
+    display: none;
+  }
+  /*banner ends here*/
+  /*banner-strip starts here*/
+  .banner-strip .container{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .banner-strip h3 {
+    font-size: 1em;
+    margin: 0.2em 0em 1em 0em;
+  }
+  .bann-strip-btn a {
+    font-size: 1em;
+    margin-right: 4em;
+  }
+  /*banner-strip ends here*/
+  /*project starts here*/
+  .project .container{
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  .project-head h3{
+    font-size: 2em;
+    margin-left: 7em;
+  }
+  .project .container .col-md-6 img{
+    margin-left: 25em;
+    width: 6em;
+    height: 6em;
+  }
+  /*project ends here*/
+  /*aboutUs starts here*/
+  .aboutUs .container{
+    padding-right: 1em;
+    padding-left:  1em;
+  }
+  #aboutUS h3{
+    font-size: 2em;
+    margin-left: 7em;
+  }
+  .aboutTeam .col-md-6 img{
+    width: 5em;
+    height: 5em;
+    margin-left: 15em;
+  }
+  .aboutTeam .col-md-6 h3{
+    font-size: 2em;
+  }
+  .aboutTeam .col-md-6 div{
+    font-size: 1em;
+  }
+  .process h3{
+    font-size: 2em;
+    margin-left: 5em;
+  }
+  .execution div span {
+    font-size: 1em;
+    margin-left: 6.5em;
+    padding-right: 3em
+  }
+  .execution div  img {
+    width: 8em;
+    height: 8em;
+    margin-left: 4em;
+  }
+  /*aboutUs ends here*/
+  /*contact starts here*/
+  .contactUs .container{
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  #contactUS{
+    font-size: 2em;
+    margin-left: 7em;
+  }
+  .contactUs .container .col-md-6{
+    padding: 50px;
+  }
+  .dataEntry{
+    font-size:1.5em;
+  }
+  .dataEntry div{
+    margin-left: 1em;
+    margin-right: 0.5em;
+    width: 4em;
+  }
+  .dataEntry input{
+    width: 14em;
+  }
+  .dataEntry textarea{
+    width: 14em;
+  }
+  .submitButton{
+    padding: 5px;
+  }
+  .submitButton button{
+    width: 15em;
+    font-size: 1em;
+  }
+  /*contact ends here*/
+  /*footer starts here*/
+  .footer .container{
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  .footer-grid h3 {
+    font-size: 1.5em;
+  }
+  .footer-grid  p {
+     font-size: 0.5em;
+  }
+   .social ul {
+    margin: 0.5em 0em 0em 0em;
+  }
+  /*--footer end here--*/
+  /*--copy right start here--*/
+  .copyright .container h4 {
+    margin-left:0em; 
+  }
+  .copyright .container div {
+    margin-left: 0em;
+  }
+  /*--copy right ends here--*/
+}
+@media(max-width:480px){
+  /*banner starts here*/
+  .logoImage{ 
+    width: 100px;
+    margin-top: -100px;
+    position: relative;
+    left: 0%;
+  }
+  .banner-logo{
+    min-width: 100px;
+    min-height: 100px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;  
+  }
+  .banner-menu {
+    width: 30%;
+  }
+  .banner-menu .menu{
+    width: 50%;
+    display: inline-block;
+    padding: 20px 0px 0px 20px;
+  }
+  .banner-menu ul {
+    display: none;
+    padding:0px;
+  }
+
+  .banner-menu ul.res {
+      margin: 0em;
+      z-index: 999;
+      position: absolute;
+      width: 100%;
+      left:0;
+      opacity: 0.8;
+  }
+  .banner-menu ul.res li {
+      display: block;
+      text-align: center;
+      background:#fff;
+      margin: 0;
+  }
+  .banner-menu ul.res li a {
+      font-size: 1em;
+      padding: 2.5em;
+      color: #000;
+      display: block;
+  }
+  ul.res li a:hover,ul.res li a.active{
+    color:#0AB2D2;
+  }
+  .storeImage{
+    padding: 0px;
+  }
+  .storeImage h3{
+    font-size: 1.5em;
+  }
+  .storeImage img{
+    padding: 0.2em;
+    width: 5em;
+  }
+  .storeImage div h4{
+    font-size: 1em;
+    padding: 0px;
+  }
+  .storeImage div input{
+    width: 7em;
+    font-size: 1em;
+  }
+  .storeImage div button{
+    width: 5em;
+    font-size: 1em;
+    margin: 10px;
+  }
+  .appImage {
+    display: none;
+  }
+  /*banner ends here*/
+  /*banner-strip starts here*/
+  .banner-strip .container{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .banner-strip h3 {
+    font-size: 1em;
+    margin: 0.2em 0em 1em 3em;
+  }
+  .bann-strip-btn a {
+    font-size: 1em;
+    margin-right: 7em;
+  }
+  /*banner-strip ends here*/
+  /*project starts here*/
+  .project .container{
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  .project-head h3{
+    font-size: 2em;
+    margin-left: 3em;
+  }
+  .project .container .col-md-6 img{
+    margin-left: 16em;
+    width: 6em;
+    height: 6em;
+  }
+  /*project ends here*/
+  /*aboutUs starts here*/
+  .aboutUs .container{
+    padding-right: 1em;
+    padding-left:  1em;
+  }
+  #aboutUS h3{
+    font-size: 2em;
+    margin-left:3em;
+  }
+  .aboutTeam .col-md-6 img{
+    width: 5em;
+    height: 5em;
+    margin-left: 8em;
+  }
+  .aboutTeam .col-md-6 h3{
+    font-size: 2em;
+  }
+  .aboutTeam .col-md-6 div{
+    font-size: 1em;
+  }
+  .process h3{
+    font-size: 1.5em;
+    margin-left: 3em;
+  }
+  .execution div span {
+    margin-left: 11em;
+    font-size: 1em;
+  }
+  .execution div  img {
+    width: 11em;
+    height: 11em;
+    margin-left: 7em;
+  }
+  /*aboutUs ends here*/
+  /*contact starts here*/
+  .contactUs .container{
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  #contactUS{
+    font-size: 2em;
+    margin-left: 3em;
+  }
+  .contactUs .container .col-md-6{
+    padding: 50px;
+  }
+  .dataEntry{
+    font-size:1.5em;
+  }
+  .dataEntry div{
+    margin-left: 1em;
+    margin-right: 0.5em;
+    width: 4em;
+  }
+  .dataEntry input{
+    width: 6em;
+  }
+  .dataEntry textarea{
+    width: 6em;
+  }
+  .submitButton{
+    padding: 5px;
+  }
+  .submitButton button{
+    width: 12.5em;
+    font-size: 1em;
+  }
+  /*contact ends here*/
+  /*footer starts here*/
+  .footer .container{
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  .footer-grid h3 {
+    font-size: 1.5em;
+  }
+  .footer-grid  p {
+     font-size: 0.5em;
+  }
+  .social ul {
+    margin: 0.5em 0em 0em 0em;
+  }
+  /*--footer end here--*/
+  /*--copy right start here--*/
+  .copyright .container h4 {
+    margin-left:0em; 
+  }
+  .copyright .container div {
+    margin-left: 0em;
+  }
+  /*--copy right ends here--*/
+}
+@media(max-width:320px){
+  /*banner starts here*/
+  .logoImage{ 
+    width: 100px;
+    margin-top: -100px;
+    position: relative;
+    left: 0%;
+  }
+  .banner-logo{
+    min-width: 100px;
+    min-height: 100px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;  
+  }
+  .banner-menu {
+    width: 30%;
+  }
+  .banner-menu .menu{
+    width: 50%;
+    display: inline-block;
+    padding: 20px 0px 0px 20px;
+  }
+  .banner-menu ul {
+    display: none;
+    padding:0px;
+  }
+
+  .banner-menu ul.res {
+      margin: 0em;
+      z-index: 999;
+      position: absolute;
+      width: 100%;
+      left:0;
+      opacity: 0.8;
+  }
+  .banner-menu ul.res li {
+      display: block;
+      text-align: center;
+      background:#fff;
+      margin: 0;
+  }
+  .banner-menu ul.res li a {
+      font-size: 1em;
+      padding: 1.5em;
+      color: #000;
+      display: block;
+  }
+  ul.res li a:hover,ul.res li a.active{
+    color:#0AB2D2;
+  }
+  .storeImage{
+    padding: 0px;
+  }
+  .storeImage h3{
+    font-size: 1.5em;
+  }
+  .storeImage img{
+    padding: 0.2em;
+    width: 5em;
+  }
+  .storeImage div h4{
+    font-size: 1em;
+    padding: 0px;
+  }
+  .storeImage div input{
+    width: 7em;
+    font-size: 1em;
+  }
+  .storeImage div button{
+    width: 5em;
+    font-size: 1em;
+    margin: 10px;
+  }
+  .appImage {
+    display: none;
+  }
+  /*banner ends here*/
+  /*banner-strip starts here*/
+  .banner-strip .container{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .banner-strip h3 {
+    font-size: 1em;
+    margin: 0.2em 0em 1em 0em;
+  }
+  .bann-strip-btn a {
+    font-size: 1em;
+    margin-right: 4em;
+  }
+  /*banner-strip ends here*/
+  /*project starts here*/
+  .project .container{
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  .project-head h3{
+    font-size: 2em;
+    margin-left: 2em;
+  }
+  .project .container .col-md-6 img{
+    margin-left: 11em;
+    width: 5em;
+    height: 5em;
+  }
+  /*project ends here*/
+  /*aboutUs starts here*/
+  .aboutUs .container{
+    padding-right: 1em;
+    padding-left:  1em;
+  }
+  #aboutUS h3{
+    font-size: 2em;
+    margin-left: 2em;
+  }
+  .aboutTeam .col-md-6 img{
+    width: 5em;
+    height: 5em;
+    margin-left: 5em;
+  }
+  .aboutTeam .col-md-6 h3{
+    font-size: 2em;
+  }
+  .aboutTeam .col-md-6 div{
+    font-size: 1em;
+  }
+  .process h3{
+    font-size: 1.5em;
+    margin-left: 1em;
+  }
+  .execution div span {
+    font-size: 1em;  
+    margin-left: 125px;
+  }
+  .execution div  img {
+    width: 11em;
+    height: 11em;
+    margin-left: 4em;
+  }
+  /*aboutUs ends here*/
+  /*contact starts here*/
+  .contactUs .container{
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  #contactUS{
+    font-size: 2em;
+    margin-left: 2em;
+  }
+  .contactUs .container .col-md-6{
+    padding: 50px;
+  }
+  .dataEntry{
+    font-size:1.5em;
+  }
+  .dataEntry div{
+    margin-left: 1em;
+    margin-right: 0.5em;
+    width: 4em;
+  }
+  .dataEntry input{
+    width: 4em;
+  }
+  .dataEntry textarea{
+    width: 4em;
+  }
+  .submitButton{
+    padding: 5px;
+  }
+  .submitButton button{
+    width: 15em;
+    font-size: 1em;
+  }
+  /*contact ends here*/
+  /*footer starts here*/
+  .footer .container{
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  .footer-grid h3 {
+    font-size: 1.5em;
+  }
+  .footer-grid  p {
+     font-size: 0.5em;
+  }
+   .social ul {
+    margin: 0.5em 0em 0em 0em;
+  }
+  /*--footer end here--*/
+  /*--copy right start here--*/
+  .copyright .container h4 {
+    margin-left:0em; 
+  }
+  .copyright .container div {
+    margin-left: 0em;
+  }
+  /*--copy right ends here--*/
+}
+
+
+
+

@@ -1,0 +1,301 @@
+<!--
+Author: Srishti
+-->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!-- Custom Theme files -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Pomato is Hyper-local E-commerce for vegetable delivery" />
+	
+	<title> Pomato </title>
+
+	<!-- CSS liberaries included here -->
+	<link rel="shortcut icon" href="favicon.png"/>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>
+	<!--Google Fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'> 
+	
+	<!-- Custome CSS file included here -->
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	
+	<script type="application/x-javascript">
+		addEventListener("load", function() {
+			setTimeout(hideURLbar, 0);
+		}, false); 
+		function hideURLbar(){ window.scrollTo(0,1); }
+	</script>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+	<script>
+	    $(function () {
+	      $("#slider").responsiveSlides({
+	      	auto: true,
+	      	speed: 500,
+	        namespace: "callbacks",
+	        pager: false,
+	        nav:true,
+	      });
+	    });
+	</script>
+	<!-- Banner Starts here -->
+	<div class="banner">
+		<div>
+			<img src="images/logo.png" href="index.html" class='logoImage'>
+			<div class='banner-logo'>
+			</div>
+			
+			<div class='banner-head' >
+				<div class="banner-menu">
+					<span class="menu"> <img src="images/icon.png" alt=""/></span>
+					<ul class="res">
+						<li><a href="#aboutUS">About Us</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#contactUS">Contact</a></li>
+					</ul>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="banner-main">
+				<div class="storeImage"> 
+					<h3> Coming Soon </h3>
+					<img src="images/appstore1.png" alt="">
+					<img src="images/appstore2.png" alt="">
+					<div>
+						<h4>Schedule a Cart NOW</h4>
+						<input type='text' placeholder="9988776655" id="phoneNumber" onblur='intializeCall()'></input>
+						<button onclick='callMeFunction()'>Call Me</button>
+					</div>
+					<script type="text/javascript">
+						function callMeFunction () {
+							var number = $('#phoneNumber').val();
+							intializeCall();
+							if(number.match(/^[0-9]+$/) == null || number.length != 10){
+								$('#phoneNumber').css('color', 'red');
+								$('#phoneNumber').addClass('shake animated');
+							} else {
+								$('#phoneNumber').val('');
+							}
+						}
+						function intializeCall() {
+							$('#phoneNumber').css('color', 'white');
+							$('#phoneNumber').removeClass('shake animated');
+						}
+					</script>
+				</div>
+				<div class="appImage">
+					<img src="images/iphone6.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="banner-strip">
+		<div class="container">
+			<h3>Veggies like they grow in your Backyard</h3>
+			<div class="bann-strip-btn">
+				<a href="#contactUS"><img src="images/mail.svg"> team@pomato.in</a>
+		    </div>
+		   <div class="clearfix"> </div>
+		</div>
+	</div> 
+	<!-- Banner ends here -->
+
+	<!--project star here-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    $('#nivo-lightbox-demo a').nivoLightbox({ effect: 'fade' });
+		});		
+	</script>
+	<div class='project'>
+		<div class="container">
+			<div class="project-head">
+				<h3>We Deliver</h3>
+			</div>
+
+			<div class="col-md-6">		
+				<img src="images/rupee.png">
+				<div class="card-main" style="border-color: rgb(11, 178, 210);">
+					<div>	We SAVE too  </div>
+					<div> Get veggies on Fixed Price </div>
+					<div> Don't BARGAIN, we have done it for you </div>
+					<div class='standOut' style="color: rgb(11, 178, 210)"> we know, MONEY matters to you. </div>
+				</div>
+				<div class="card-footer" style="background-color: rgb(11, 178, 210);">ECONOMIC</div>	
+			</div>
+			<div class="col-md-6">
+				<img src="images/apple.png">
+				<div class="card-main" style="border-color: rgb(194, 24, 91);">
+					<div>	No need to store veggies anymore  </div>
+					<div>  Get farm-fresh veggies on your call </div>
+					<div>   Any time of the day, wth NO minimum cost</div>
+					<div class='standOut' style="color: rgb(194, 24, 91);">Buy Fresh buy Less </div>
+				</div>
+				<div class="card-footer" style="background-color: rgb(194, 24, 91);">FRESH</div>		
+			</div>
+			<div class="col-md-6">
+				<img src="images/Bag.png">
+				<div class="card-main" style="border-color: rgb(187,187,187);">
+					<div>	Even we don't like going Mandi  </div>
+					<div>  Save your time, money and Energy </div>
+					<div>  Call your Cart to your door, get veggies at Mandi price</div>
+					<div class='standOut' style="color: rgb(187,187,187);">Its easier SAID and simpler DONE </div>
+				</div>
+				<div class="card-footer" style="background-color: rgb(187,187,187);">CONVENIENCE</div>
+			</div>
+			<div class="col-md-6">		
+				<img src="images/choice.png">
+				<div class="card-main" style="border-color: rgb(245, 166, 35);">
+					<div> Buying veggies online sounds weird  </div>
+					<div>	Why trust a stranger to do your grocerry shopping  </div>
+					<div>  Call your cart and shop happily</div>					
+					<div class='standOut' style="color: rgb(245, 166, 35);">Choosing your own veggies is your RIGHT </div>
+				</div>					
+				<div class="card-footer" style="background-color: rgb(245, 166, 35);">CHOICE</div>		
+			</div>
+			
+			<script type="text/javascript">
+				$('.col-md-6').hover(function(el){
+				$(el.currentTarget).addClass('pulse animated');
+			},function(el){
+				$(el.currentTarget).removeClass('pulse animated');
+				
+			});
+  			</script>
+		</div>
+	</div>
+	<!--project end here-->
+
+	<!-- About us starts here -->
+	<div class="aboutUs">
+		<div class="container">
+			<div id="aboutUS">
+				<h3>About Us</h3>
+			</div>
+			<div class='aboutTeam'>
+				<div class="col-md-6">
+					<img src="images/team.png"/>
+					<h3>Small Team</h3>
+					<div>Team with BIG ideas</div>
+					<div>Design and Prototyping from day one</div>
+				</div>
+				<div class="col-md-6">
+					<img src="images/customer.png"/>
+					<h3>Customer = <p style="color:rgb(11,178,210);display: inline;">Partner</p></h3>
+					<div>
+						Customer become part of the team to make sure we truly understand their requirements.
+					</div>
+				</div>
+			</div>
+			<div class="process">
+				<h3>Our simple process</h3>
+			</div>
+			<div class="execution">
+				<div>
+					<span>LEARN</span>
+					<span>DESIGN</span>
+					<span>DEPLOY</span>
+				</div>
+				<div>
+					<img src="images/learn.png"/>
+					<img src="images/design.png"/>
+					<img src="images/deploy.png"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- About us end here -->
+	<div class="contactUs">
+		<div class="container">
+			<div id='contactUS'>Let's Talk</div>
+			<div class="dataBox">
+				<div class='dataEntry'>
+					<div>E mail: </div>
+					<input type="text" id='email'></input>
+				</div>
+				<div class='dataEntry'>
+					<div  style="bottom: 200px">Message: </div>
+					<textarea type="text" rows="5" id='message'></textarea>
+				</div>
+				<div class="submitButton">
+					<button onclick="submitToFunction()">Submit Message</button>
+				</div>
+			</div>
+			<script type="text/javascript">
+				function submitToFunction (){
+					var email = $('#email').val();
+					var message = $('#message').val();
+					intializeBox();
+					if(email.indexOf('@') == -1) {
+						$('#email').css('color','red');
+						$('#email').addClass('shake animated');
+					} else if(message.length == 0) {
+						$('#message').addClass('shake animated');
+						$('#message').css('border-color','red');
+					} else {
+						$('#email').val('');
+						$('#message').val('');
+					}
+				}
+				function intializeBox (){
+					$('#email').removeClass('shake animated');
+					$('#message').removeClass('shake animated');
+
+					$('#email').css('color','rgb(194, 24, 91)');
+					$('#message').css('border-color','rgb(11,178,210)');
+
+				}
+			</script>
+		</div>
+	</div>
+	<!--footer start here-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-main">
+				<div class="col-md-6 footer-grid">
+					<h3>support@pomato.in</h3>
+					<p> Pune, Maharashtra (9028-58-3892)</p>
+					<div class="social">
+						<ul >
+							<li><a class="fa" href="https://www.facebook.com/getPomato"> </a></li>
+							<li><a class="tw" href="https://twitter.com/getpomato"> </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="container">
+				<h4> &copy; Copyright 2015 MyCart Pvt. Ltd. All Rights Reserved</h4>
+				<div>
+					<a href="/privacy"> Privacy Policy</a> <span>|</span>
+					<a href="/terms"> Terms & Conditions</a> <span>|</span>
+					<a href="/policy">Acceptance Usage Policy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--footer end here-->
+</body>
+</html>
