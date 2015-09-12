@@ -46,6 +46,16 @@ Desc: Pomato main Index.html, here all the
 
 <body>
   <!-- Nav Menu Section -->
+
+  <div class="logo-menu" style="max-height:2em;">
+    <nav class="navbar navbar-default" style="background:#3D3F3C">
+      <div class="col-md-12 text-center">
+        <!-- Brand and toggle get grouped for better mobile display -->
+         <p> Live in Viman Nagar, Pune</p>
+      </div>
+    </nav>
+  </div>
+
   <div class="logo-menu">
     <nav class="navbar navbar-default">
       <div class="container">
@@ -66,13 +76,13 @@ Desc: Pomato main Index.html, here all the
               <img src="images/pomato-home.png">
               Home</a>
             </li>
-            <li><a href="#features"> 
+            <li><a href="#features" class="page-scroll"> 
               <img src="images/pomato-service.png">
               Service</a>
             </li>
-            <li><a href="about.html">
+            <li><a href="#testimonials">
               <img src="images/pomato-about.png">
-              About</a>
+              Testimonials</a>
             </li>
             <li><a href="blog.html">
               <img src="images/pomato-blog.png">
@@ -84,7 +94,22 @@ Desc: Pomato main Index.html, here all the
     </nav>
   </div>
   <!-- Nav Menu Section End -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('a[href^="#"]').on('click',function (e) {
+          e.preventDefault();
 
+          var target = this.hash;
+          var $target = $(target);
+
+          $('html, body').stop().animate({
+              'scrollTop': $target.offset().top
+          }, 900, 'swing', function () {
+              window.location.hash = target;
+          });
+      });
+    });
+  </script>
   <!-- Hero Area Section -->
   <section id="hero-area">
     <div class="hero-inner">
@@ -92,7 +117,7 @@ Desc: Pomato main Index.html, here all the
         <div class="row">
           <div class="col-md-12">
             <h1 class="title-big">Shop at your Doorstep</h1>
-            <h2 class="subtitle-big">Economic | Fresh | Convenient | Choice</h2>
+            <h2 class="subtitle-big">Economic | Fresh | Choice | Convenient </h2>
           </div>
           <!-- <div class="col-md-12 text-center">
             <form role="form" class="sign-up-form">
@@ -160,7 +185,7 @@ Desc: Pomato main Index.html, here all the
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow fadeInUp" data-wow-delay=".5s" style="padding-top:1em;">
           <div class="feature-item">
             <img src="assets/img/features/pomato-economic.png">
-            <h3>Budget</h3>
+            <h3>Economic</h3>
             <p>Now vegetables at Mandi price, NO bargaining, NO minimum cost</p>
           </div>
         </div>
@@ -175,7 +200,7 @@ Desc: Pomato main Index.html, here all the
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow fadeInUp" data-wow-delay="1.2s" style="padding-top:1em;">
           <div class="feature-item">
             <img src="assets/img/features/pomato-choice.png">
-            <h3>Choose</h3>
+            <h3>Choice</h3>
             <p>NO stranger delivering stale vegetables, choose from your own thela</p>
           </div>
         </div>
@@ -183,8 +208,8 @@ Desc: Pomato main Index.html, here all the
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow fadeInUp" data-wow-delay="1.6s" style="padding-top:1em;">
           <div class="feature-item">
             <img src="assets/img/features/pomato-convenient.png">
-            <h3>Simple</h3>
-            <p>DON'T waste time walking in mandi, farm fresh vegetables on you doorstep</p>
+            <h3>Convenient</h3>
+            <p>DON'T waste time walking in mandi, farm fresh vegetables on your doorstep</p>
           </div>
         </div>
       </div>
@@ -204,65 +229,161 @@ Desc: Pomato main Index.html, here all the
           Install and Fire Up your APP</p>
         </div>
         
-       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <div class="content-left text-right wow fadeInLeft animated" data-wow-offset="10">
-            <div class="box-item left">
-              <span class="icon">
-                <i class="fa"><img src="assets/img/features/pomato-install.png"></i>
-              </span>
-              <div class="text">
-                <h4>Get the app from Play Store</h4>
+       <!--  <div class="col-md-12 text-center">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="content-left text-right wow fadeInLeft animated" data-wow-offset="10">
+              <div class="box-item left">
+                <span class="icon leftSide">
+                  <i class="fa"><img src="assets/img/features/pomato-install.png"></i>
+                </span>
+                <div class="text">
+                  <h4>Get the app from Play Store</h4>
+                </div>
               </div>
             </div>
-            <div class="box-item left">
-              <span class="icon">
-                <i class="fa"><img src="assets/img/features/pomato-order.png"></i>
-              </span>
-              <div class="text">
-                <h4>Request for your nearest Vendor</h4>
-              </div>
-            </div>
-            <div class="box-item left">
-              <span class="icon">
-                <i class="fa"><img src="assets/img/features/pomato-notify.png"></i>
-              </span>
-              <div class="text">
-                <h4>Get Notified on Vendor arrival</h4>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="content-right text-left wow fadeInRight animated" data-wow-offset="10">
+              <div class="box-item right">
+                <span class="icon rightSide">
+                  <i class="fa"><img src="assets/img/features/pomato-fridge.png"></i>
+                </span>
+                <div class="text">
+                  <h4>Don't stock week long vegetables</h4>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <div class="show-box wow fadeInDown animated" data-wow-offset="10">
-            <img src="assets/img/features/pomato-iphone-vendor.png" alt="" style="width:16.5em;">
+        <div class="col-md-12 text-center">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="content-left text-right wow fadeInLeft animated" data-wow-offset="10">
+              <div class="box-item left">
+                <span class="icon leftSide">
+                  <i class="fa"><img src="assets/img/features/pomato-order.png"></i>
+                </span>
+                <div class="text">
+                  <h4>Request for your nearest Vendor</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="content-right text-left wow fadeInRight animated" data-wow-offset="10">
+              <div class="box-item right">
+                <span class="icon rightSide">
+                  <i class="fa"><img src="assets/img/features/pomato-wait.png"></i>
+                </span>
+                <div class="text">
+                  <h4>Don't be waiting for the vendor</h4>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <div class="content-right text-left wow fadeInRight animated" data-wow-offset="10">
-            <div class="box-item right">
-              <span class="icon">
-                <i class="fa"><img src="assets/img/features/pomato-fridge.png"></i>
-              </span>
-              <div class="text">
-                <h4>Don't stock week long vegetables</h4>
+        <div class="col-md-12 text-center">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="content-left text-right wow fadeInLeft animated" data-wow-offset="10">
+              <div class="box-item left">
+                <span class="icon leftSide">
+                  <i class="fa"><img src="assets/img/features/pomato-notify.png"></i>
+                </span>
+                <div class="text">
+                  <h4>Get Notified on Vendor arrival</h4>
+                </div>
               </div>
             </div>
-            <div class="box-item right">
-              <span class="icon">
-                <i class="fa"><img src="assets/img/features/pomato-wait.png"></i>
-              </span>
-              <div class="text">
-                <h4>Don't be waiting for the vendor</h4>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="content-right text-left wow fadeInRight animated" data-wow-offset="10">
+              <div class="box-item right">
+                <span class="icon rightSide">
+                  <i class="fa"><img src="assets/img/features/pomato-bags.png"></i>
+                </span>
+                <div class="text">
+                  <h4>Don't let crowded Mandi and heavy bags ruin your day</h4>
+                </div>
               </div>
             </div>
-            <div class="box-item right">
-              <span class="icon">
-                <i class="fa"><img src="assets/img/features/pomato-bags.png"></i>
-              </span>
-              <div class="text">
-                <h4>Don't let crowded Mandi and heavy bags ruin your day</h4>
+          </div>
+        </div>
+ -->
+        <div class="col-md-12 text-center">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators" style="bottom:40px;">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <div class="text">
+                  <h4>Don't stock week long vegetables</h4>
+                </div>
+                <img src="assets/img/features/pomato-install-app.png" alt="install" style="width:15em; display:inline">
+                <div class="text">
+                  <h4>Install the app from Play Store</h4>
+                </div>
               </div>
+
+              <div class="item text-center">
+                <div class="text">
+                  <h4>Don't be waiting for the vendor</h4>
+                </div>
+                <img src="assets/img/features/pomato-order-app.png" alt="order" style="width:15em; display:inline" >
+                <div class="text">
+                  <h4>Request for your nearest Vendor</h4>
+                </div>
+              </div>
+            
+              <div class="item text-center">
+                <div class="text">
+                  <h4>Don't let crowded Mandi and heavy bags ruin your day</h4>
+                </div>
+                <img src="assets/img/features/pomato-notify-app.png" alt="notify" style="width:15em; display:inline">
+                <div class="text">
+                  <h4>Get Notified on Vendor arrival</h4>
+                </div>
+              </div>
+          
             </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-12 text-center partner">
+          <h2>Trusted Vendors</h2>
+          <h4 style="padding-bottom:2em;">Get the freshest vegetables everytime</h4>
+          <!-- <div class="connector"></div> -->
+          <div class= "col-md-4 col-lg-4 col-sm-4 col-xs-12">
+            <span class="icon rightSide">
+              <i class="fa"><img src="assets/img/features/pomato-vendor.png"></i>
+            </span>
+            <h4>Thela Vendor</h4>
+          </div>
+          <div class= "col-md-4 col-lg-4 col-sm-4 col-xs-12">
+            <span class="icon rightSide">
+              <i class="fa"><img src="assets/img/features/pomato-auto.png"></i>
+            </span>
+            <h4>Auto Vendors</h4>
+          </div>
+          <div class= "col-md-4 col-lg-4 col-sm-4 col-xs-12">
+            <span class="icon rightSide">
+              <i class="fa"><img src="assets/img/features/pomato-shop.png"></i>
+            </span>
+            <h4>Kirana Shop</h4>              
           </div>
         </div>
 
@@ -276,34 +397,131 @@ Desc: Pomato main Index.html, here all the
   </section>
   <!-- Features Section Start -->
 
-  <div class="footer">
+  <div class="footer" id="testimonials">
     <div class="container">
-      <div class="footer-main">
-        <div class="col-md-6 footer-grid">
-          <h3>support@pomato.in</h3>
-          <p> Pune, Maharashtra (9028-58-3892)</p>
-          <div class="social">
-            <ul >
-              <li><a class="fa" href="https://www.facebook.com/getPomato"> </a></li>
-              <li><a class="tw" href="https://twitter.com/getpomato"> </a></li>
-            </ul>
+      <h1 class="title-small wow tada text-center">Serving Happiness</h1>
+      <h2 class="subtitle-small wow fadeInLeft text-center" data-wow-delay=".5s">Customer Satisfaction drives Us</h2>
+      
+      <div class="footer-main col-md-12">
+
+        <div class="carousel slide" id="testimonialCarousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 footer-grid text-center">
+                <div class="card">
+                  <div class="photo">
+                    <img src="assets/img/testimonial/uncle.jpg">
+                  </div>
+                  <div class="Desig">
+                    <h3>Data</h3>
+                  </div>
+                  <div class="message">
+                    <h2>Message</h2>
+                  </div>
+                </div>  
+              </div>
+            </div>
+            <div class="item">
+              <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 footer-grid text-center">
+                <div class="card">
+                  <div class="photo">
+                    <img src="assets/img/testimonial/family.jpg">
+                  </div>
+                  <div class="Desig">
+                    <h3>Data</h3>
+                  </div>
+                  <div class="message">
+                    <h2>Message</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 footer-grid text-center">
+                <div class="card">
+                  <div class="photo">
+                    <img src="assets/img/testimonial/work-prof.jpg">
+                  </div>
+                  <div class="Desig">
+                    <h3>Data</h3>
+                  </div>
+                  <div class="message">
+                    <h2>Message</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 footer-grid text-center">
+                <div class="card">
+                  <div class="photo">
+                    <img src="assets/img/testimonial/student.jpg">
+                  </div>
+                  <div class="Desig">
+                    <h3>Data</h3>
+                  </div>
+                  <div class="message">
+                    <h2>Message</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          <a class="left carousel-control" href="#testimonialCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+          <a class="right carousel-control" href="#testimonialCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        
         </div>
         <div class="clearfix"> </div>
       </div>
     </div>
+  </div>
   <!--footer ends here-->
+  <script type="text/javascript">
+    // $('.carousel').carousel({
+    //   interval: 10000;
+    // });
+    $('#testimonialCarousel .item').each(function(){
+      var next = $(this).next();
+      if (!next.length) {
+        next = $(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+      
+      if (next.next().length>0) {
+        next.next().children(':first-child').clone().appendTo($(this));
+      }
+      else {
+        $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+      }
+    });
+  </script>
+
   <!--Copyright starts here-->
-    <div class="copyright">
-      <div class="container">
-        <h4> &copy; Copyright 2015 Pomato Technologies Pvt. Ltd. All Rights Reserved</h4>
+  <div class="copyright">
+    <div class="container">
+      <div class="col-md-4 col-xs-12">
+        <h3>support@pomato.in</h3>
+      </div>
+      <div class="col-md-4 col-xs-12">
+        <h4>&copy; Copyright 2015 Pomato Technologies Pvt. Ltd. </h4>
+        <h5>All Rights Reserved</h5>
         <div>
           <a href="/privacy"> Privacy Policy</a> <span>|</span>
           <a href="/terms"> Terms & Conditions</a> <span>|</span>
           <a href="/policy">Acceptance Usage Policy</a>
         </div>
       </div>
+      <div class="col-md-4 col-xs-12">
+        <div class="social">
+          <ul >
+            <li><a class="fa" href="https://www.facebook.com/getPomato"> </a></li>
+            <li><a class="tw" href="https://twitter.com/getpomato"> </a></li>
+          </ul>
+        </div>
+      </div>
+      
     </div>
+  
    <!-- Bootstrap JS -->
   <script src="assets/js/bootstrap.js"></script>
   <!-- WOW JS plugin for animation -->

@@ -46,6 +46,11 @@ a:hover {
   background: #2980b9;
   color: #fff;
 }
+nav div p{
+  font-family: fantasy;
+  color: #fff;
+  padding-top: 0.5em;
+}
 .title-big {
   text-align: center;
   font-size: 60px;
@@ -67,7 +72,7 @@ a:hover {
 }
 .subtitle-small {
   font-weight: 100;
-  padding-bottom: 3em;
+  padding-bottom: 2em;
   position: relative;
   color: #3D3F3C;
   font-size: 1.5em;
@@ -100,34 +105,78 @@ a:hover {
   background: none;
   padding: 8px 15px;
 }
-.footer {
-  background: #3D3F3C;
+.connector{
+  border: 2px solid white;
+  top: 2em;
+  position: relative;
+  width: 55em;
+  left: 12em;
 }
-/*.footer .container{
-  padding-right: 120px;
-  padding-left: 102px;
-}*/
+.carousel-inner .item .text h4{
+  font-weight: 400;
+  position: relative;
+  color: #fff;
+  font-family: 'Dosis';
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+.partner h2 , .partner h4{
+  font-weight: 100;
+  padding-bottom: 0.5em;
+  position: relative;
+  color: #3D3F3C;
+  font-family: 'Dosis';
+}
+.partner div img{
+  padding: 0.5em;
+  width: 4em;
+}
+.partner div h4{
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5em;
+  font-family: 'Dosis';
+  padding-top: 1em;
+}
+.carousel-inner .active.left { left: -33%; }
+.carousel-inner .next        { left:  33%; }
+.carousel-inner .prev        { left: -33%; }
+.carousel-control.left,.carousel-control.right {background-image:none;}
+#testimonialCarousel .carousel-inner{
+  max-height: 30em;
+  min-height: 20em;
+}
+.footer {
+  background: #fff;
+}
+.footer .container{
+  padding: 3em 0 3em 0;
+}
 .footer-main {
-  padding: 2em 0em 2em 0em;
+  padding: 2em 0em 5em 0em;
+}
+.card{
+  border: 1px solid #fff;
+  background-color: #F3F3F3;
+  box-shadow: 5px 5px 5px grey;
+  max-height: 30em;
+  padding: 0.5em;
+}
+.photo img{
+  width: 5em;
 }
 .footer-grid h3 {
   font-family: "Dosis";
-  font-size: 2.5em;
-  font-weight: 400;
-  color:rgb(11, 178, 210);
-  margin: 0px 0px 25px 0px;
+  font-size: 1.5em;
+  color: grey;
 }
-.footer-grid  p {
-  font-family: 'Poiret One';
-  font-size: 1em;
-  font-weight: 600;
-  color: #fff;
-  line-height: 1.6em;
+.footer-grid  h2 {
+  font-size: 2em;
+  font-family: 'dosis';
 }
 .social {
-  float: left;
-  margin-left: -3em;
-}
+  text-align: center;
+ }
 .social ul {
   margin: 2.3em 0em 0em 0em;
   list-style: none;
@@ -161,18 +210,32 @@ a:hover {
   background: #30322F;
   padding: 1em 0em 1em 0em;
 }
-.copyright .container h4 {
-  margin-left:30%; 
-  color: aliceblue;
-  font-size: 15px
+.copyright .container div h3{
+ font-family: "Dosis";
+  font-weight: 400;
+  margin: 0px 0px 25px 0px;
+  color: #fff;
 }
-.copyright .container div {
-  margin-left: 35%;
+
+.copyright .container div h4 { 
+  font-family: 'Dosis';
+  color: #fff;
+}
+.copyright .container div h5{
+  color: #fff;
+  font-family: 'Dosis';
+  text-align: center;
 }
 .copyright .container div a{
-   color: aliceblue;
-   font-size: 12px;
+    color: #fff;
+    font-family: 'Dosis';
 } 
+.copyright .container div span{
+  color: #fff;
+}
+.copyright .container div h3 :hover, .copyright .container div a :hover{
+  color:rgb(11, 178, 210);
+}
 /*--copy right end here--*/
 .navbar-default .navbar-nav li a,
 .navbar-default .navbar-nav li a:hover {
@@ -259,16 +322,19 @@ a:hover {
   padding: .25em;
 }
 .code {
-  font-size: 22px;
+  font-size: 1.5em;
   color: #FFFFFF;
   margin: 0 0px;
   display: none;
-  width: 47px;
+  width: 1.5em;
+  font-family: 'dosis';
 }
 .container .intl-tel-input #user-phone-value {
-  font-size: 22px;
+  font-size: 1.5em;
   border: none;
-  width: 100%;
+  width: 13em;
+  /* padding: 0.5em; */
+  font-family: 'dosis';
 }
 #user-phone-value {
     outline: 0;
@@ -279,22 +345,16 @@ a:hover {
     display: block;
 }
 #get-app-button {
-    font-size: 22px;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin-left: -5px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    background-color: #F5A623;
-    color: #fff;
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-left: -0.5em;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #F5A623;
+  color: #fff;
 }
 .btn {
     border-radius: 0px;
-}
-
-
-#hero-area .btn {
-  margin-right: 20px;
 }
 #hero-area img {
   max-width: 100%;
@@ -405,7 +465,6 @@ background: url(../img/backgrounds/hero-bg.jpg) fixed;
 #features .content-left,
 #features .content-right {
   position: relative;
-  top: 60px;
 }
 #features .content-left span {
   float: right;
@@ -419,12 +478,18 @@ background: url(../img/backgrounds/hero-bg.jpg) fixed;
   padding-bottom: 40px;
 }
 #features .box-item .icon {
-  background: #3498db;
+  /*background: #3498db;*/
   text-align: center;
   margin-top: 12px;
   -webkit-transition: background 0.2s, color 0.2s;
   -moz-transition: background 0.2s, color 0.2s;
   transition: background 0.2s, color 0.2s;
+}
+.leftSide{
+  background: #0AB2D2;
+}
+.rightSide{
+  background: #C2185B;
 }
 #features .box-item .icon i {
   color: #333333;
