@@ -39,19 +39,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 </head>
 <body>
-
-
-<!-- strat-banner -->
+<!---strat-banner---->
 <div class="logo-menu" style="max-height:2em;">
-	<nav class="navbar navbar-default" style="background:#3D3F3C">
-	  <div class="col-md-12 text-center">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	     <p> Live in Viman Nagar, Pune</p>
-	  </div>
-	</nav>
+<nav class="navbar navbar-default" style="background:#3D3F3C">
+  <div class="col-md-12 text-center">
+    <!-- Brand and toggle get grouped for better mobile display -->
+     <p> Live in Viman Nagar, Pune</p>
+  </div>
+</nav>
 </div>
+
 <div class="banner">				
-	<div class="logo-menu">
+	 <div class="logo-menu">
 		<nav class="navbar navbar-default">
 		  <div class="container">
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -88,12 +87,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		  </div>
 		</nav>
 	</div>
-
-	 <div class="container">
+	  <div class="container">
 		 <div class="banner-head">
 			 <h1>Grocerry Shopping Simplified</h1>
 			 <h2>Buy less Buy Fresh</h2>
-		 </div>		 
+		 </div>
+		 
 	 </div>
 </div>
 <!---//End-banner---->
@@ -107,21 +106,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						 <h4>Sept 15, 2015,Posted by: <a href="#">Admin</a></h4>
 						 <div class="clearfix"></div>
 					 </div>
-					 <div class="content-grid-info">
-						 <h3><a href="helloPune.html">Hello Pune !!</a></h3>
-						 <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.</p>
-						 <img src="assets/img/blog/blog-one.jpg" alt=""/>
-						 <a class="bttn" href="helloPune.html">MORE</a>
-					</div>
-				 </div>
-				 
-				 <div class="pages">
-					 <ul>
-						 <li class="active"><a href="#">1</a></li>
-						 <li><a href="#">Previous</a></li>
-						 <li><a href="#">Next</a></li>
-					 </ul>
-				 </div>				 
+					 <div class="content-grid-single">
+						 <h3>Hello Pune !!</h3>
+						 <span>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.</span>
+						 <img class="single-pic" src="assets/img/blog/blog-one.jpg" alt=""/>
+						 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						 Nullam a efficitur odio, ac maximus lorem. Nullam aliquam fermentum lectus ut sagittis. Sed pulvinar sed ligula gravida condimentum. Proin eleifend vestibulum tortor, ut pellentesque lorem tempor a. Nunc pharetra lacus at laoreet suscipit. Aliquam tempor mattis sagittis. Mauris viverra mi quis risus molestie placerat. Sed accumsan vestibulum fringilla. Etiam dapibus tellus ac eros placerat, at aliquam arcu lobortis. Vestibulum sollicitudin mauris dui, a tempor metus lacinia sed. Nam a auctor purus, nec rutrum ipsum.
+						 Maecenas lacus ex, finibus non tempor at, ultrices id sem. Suspendisse et magna et tellus facilisis lacinia at et diam. Fusce finibus ullamcorper ligula non tristique. Nulla facilisi. Donec ultricies nisi vel quam venenatis efficitur. Praesent porta risus arcu, at egestas ante accumsan eu. Phasellus et lacus quis lacus imperdiet fermentum eu a enim. Praesent non lorem rhoncus, cursus leo nec, pellentesque dui.</p>
+						 
+					  </div>	 
+				 </div>			 			 
 			 </div>
 			 
 			 <div class="col-md-4 content-main-right">
@@ -145,15 +139,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		 </div>
 	 </div>
 </div>
-
-<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-
+</div>
+<!---->
 <script type="text/javascript">
-	$(document).ready(function() {
-	$().UItoTop({ easingType: 'easeOutQuart' });
+		$(document).ready(function() {
+				/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+				*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
 });
 </script>
-
+<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- Analytics Code -->
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
