@@ -84,10 +84,10 @@ Desc: Pomato main Index.html, here all the
               <img src="images/pomato-about.png">
               Testimonials</a>
             </li>
-            <li><a href="blog.html">
+            <!-- <li><a href="blog.html">
               <img src="images/pomato-blog.png">
               Blog</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -119,20 +119,8 @@ Desc: Pomato main Index.html, here all the
             <h1 class="title-big">Shop at your Doorstep</h1>
             <h2 class="subtitle-big">Economic | Fresh | Choice | Convenient </h2>
           </div>
-          <!-- <div class="col-md-12 text-center">
-            <form role="form" class="sign-up-form">
-              <div class="form-group col-md-offset-4 col-md-4 col-md-offset-4 wow fadeInDown">
-                <input type="email" class="form-control" id="signupemail" placeholder="Enter email">
-              </div>
-              <div class="form-group col-md-offset-4 col-md-4 col-md-offset-4 wow fadeInDown" data-wow-delay=".7s">
-                <input type="password" class="form-control" id="signuppassword" placeholder="Password">
-
-                <a class="sign-up-button btn btn-border btn-lg col-md-offset-3 col-md-6 col-md-offset-3 wow fadeInUp" data-wow-delay="1s" href="#">Sign Up Now!</a>
-              </div>
-            </form>
-          </div> -->
           <div class='col-md-6'>
-            <p> Now Available on </p>
+            <p> Coming soon on </p>
             <img src="assets/img/backgrounds/appstore2.png" class='appstore'>
             <h4 class="or">
               <span>OR</span>
@@ -142,11 +130,15 @@ Desc: Pomato main Index.html, here all the
                   <div class="phone-icon" style="display: block;"><i title="Enter your mobile number" class="fa fa-mobile fa-lg"></i></div>
                   <div class="code" style="display: none;">+91</div>
                   <div>
-                      <input type="tel" id="user-phone-value" placeholder="Phone number" maxlength="10" onkeypress="return event.charCode > 47 &amp;&amp; event.charCode < 58;" pattern="[0-9]{5}" onkeydown="if (event.keyCode == 13) $('.grofers-get-app').click()">
+                      <input type="tel" id="user-phone-value" placeholder="Phone number" maxlength="10" onkeypress="return event.charCode > 47 &amp;&amp; event.charCode < 58;" pattern="[0-9]{5}" onkeydown="if (event.keyCode == 13) $('.get-app').click()">
                   </div>
               </div>
-              <button title="and chill" id="get-app-button" type="submit" class="grofers-get-app btn fixwidth">Get App</button>
+              <button title="and chill" id="get-app-button" type="submit" class="get-app btn fixwidth">Register</button>
           </div>
+          <div class="text-center">
+              <img src="loading.gif" class="loader">
+          </div>
+          <div clasa="error-msgs"></div>
           </div>
           <div class='col-md-6'>
             <img src="assets/img/backgrounds/pomato-iphone-app.png" class="iphone-app">
@@ -157,7 +149,7 @@ Desc: Pomato main Index.html, here all the
   </section>
 
   <!-- Hero Area Section End-->
-<script type="text/javascript">
+  <script type="text/javascript">
     $('.code').hide();
     $('.intl-tel-input input').blur(function(){
         $('input').attr("placeholder","Phone number");
@@ -170,30 +162,92 @@ Desc: Pomato main Index.html, here all the
         $('.code').show();
         $('.phone-icon').hide();
     })
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#get-app-button").click(function () {
+        // var opts = {
+        //   lines: 8, // The number of lines to draw
+        //   length: 6, // The length of each line
+        //   width: 1, // The line thickness
+        //   radius: 1, // The radius of the inner circle
+        //   corners: 1, // Corner roundness (0..1)
+        //   rotate: 0, // The rotation offset
+        //   direction: 1, // 1: clockwise, -1: counterclockwise
+        //   color: '#e96125', // #rgb or #rrggbb or array of colors
+        //   speed: 1, // Rounds per second
+        //   trail: 60, // Afterglow percentage
+        //   shadow: false, // Whether to render a shadow
+        //   hwaccel: false, // Whether to use hardware acceleration
+        //   className: 'spinner', // The CSS class to assign to the spinner
+        //   zIndex: 2e9, // The z-index (defaults to 2000000000)
+        //   //top: '50%', // Top position relative to parent
+        //   //left: '50%' // Left position relative to parent
+        // };
+        
+        $('.loader').css('visibility', 'visible');
+        var url = "https://control.msg91.com/sendhttp.php";
+        // if (window.location.search!=undefined && window.location.search!=""){
+        //     var campaignCode = window.location.search;
+        //     url = 'https://api.grofers.com/v2/' + 'accounts/sms_sign_up/' + campaignCode;
+        // }
+        var postData = {
+          'authkey' :  "90487AXjB81deR455cba015",
+          'mobiles' : $('#user-phone-value').val(),
+          'message' : "Thank you for registering with Pomato. We will inform you first thing when our android app launches",
+          'sender' : "POMATO",
+          'route' : "4",
+          'response' : "json"
+        }
+        $.ajax({
+          url : url,
+          type : 'POST',
+          data :postData,
+          success : function (data) {
+
+            $('.loader').css('visibility', 'hidden');
+            console.log(data);
+            $("#child-append-data").remove();
+            if (data != 'Enter a valid phone number'){
+              $('.error-msgs').append('<div id="child-append-data" class="alert alert-success top-buffer text-center">' + data.message +'</div>')
+                }
+            else{
+              $('.error-msgs').append('<div id="child-append-data" class="alert alert-danger top-buffer  text-center">' + data.message +'</div>')
+                }
+              // $('section').css('margin-top' , '-40px');
+          },
+          error : function (request, status, error){
+
+            $('.loader').css('visibility', 'hidden');
+            $("#child-append-data").remove();
+            $('.error-msgs').append('<div id="child-append-data" class="alert alert-danger top-buffer  text-center">' + status + ' Please Try Again' + '</div>')
+          } 
+        })
+      });
+    });
 
   </script>
-
 
   <!-- feature Section -->
 
   <section id="key-features">
     <div class="container text-center">
       <div class="row">
-        <h1 class="title-small wow tada">Features</h1>
+        <h1 class="title-small wow tada">Benefits</h1>
         <h2 class="subtitle-small wow fadeInLeft" data-wow-delay=".5s">Simplifying your daily chores</h2>
 
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow fadeInUp" data-wow-delay=".5s" style="padding-top:1em;">
           <div class="feature-item">
             <img src="assets/img/features/pomato-economic.png">
             <h3>Economic</h3>
-            <p>Now vegetables at Mandi price, NO bargaining, NO minimum cost</p>
+            <p>Now vegetables at Mandi price, No more bargaining, No more minimum cost</p>
           </div>
         </div>
          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow fadeInUp" data-wow-delay="0.8s" style="padding-top:1em;">
           <div class="feature-item">
             <img src="assets/img/features/pomato-fresh.png">
             <h3>Fresh</h3>
-            <p>Farm fresh vegetables on your call, NO need to fill up your fridge
+            <p>Farm fresh vegetables on your call wherever you want, No need to fill up your fridge
             </p>
           </div>
         </div>
@@ -201,7 +255,7 @@ Desc: Pomato main Index.html, here all the
           <div class="feature-item">
             <img src="assets/img/features/pomato-choice.png">
             <h3>Choice</h3>
-            <p>NO stranger delivering stale vegetables, choose from your own thela</p>
+            <p>No stranger delivering stale vegetables, choose from your own thela</p>
           </div>
         </div>
 
@@ -209,7 +263,7 @@ Desc: Pomato main Index.html, here all the
           <div class="feature-item">
             <img src="assets/img/features/pomato-convenient.png">
             <h3>Convenient</h3>
-            <p>DON'T waste time walking in mandi, farm fresh vegetables on your doorstep</p>
+            <p>Don't waste time walking in mandi, farm fresh vegetables on your doorstep</p>
           </div>
         </div>
       </div>
@@ -228,86 +282,7 @@ Desc: Pomato main Index.html, here all the
           <p class="btn btn-border btn-lg wow fadeInLeft animated" data-wow-offset="50" ><i class="fa fa-android"></i> 
           Install and Fire Up your APP</p>
         </div>
-        
-       <!--  <div class="col-md-12 text-center">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="content-left text-right wow fadeInLeft animated" data-wow-offset="10">
-              <div class="box-item left">
-                <span class="icon leftSide">
-                  <i class="fa"><img src="assets/img/features/pomato-install.png"></i>
-                </span>
-                <div class="text">
-                  <h4>Get the app from Play Store</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="content-right text-left wow fadeInRight animated" data-wow-offset="10">
-              <div class="box-item right">
-                <span class="icon rightSide">
-                  <i class="fa"><img src="assets/img/features/pomato-fridge.png"></i>
-                </span>
-                <div class="text">
-                  <h4>Don't stock week long vegetables</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-12 text-center">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="content-left text-right wow fadeInLeft animated" data-wow-offset="10">
-              <div class="box-item left">
-                <span class="icon leftSide">
-                  <i class="fa"><img src="assets/img/features/pomato-order.png"></i>
-                </span>
-                <div class="text">
-                  <h4>Request for your nearest Vendor</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="content-right text-left wow fadeInRight animated" data-wow-offset="10">
-              <div class="box-item right">
-                <span class="icon rightSide">
-                  <i class="fa"><img src="assets/img/features/pomato-wait.png"></i>
-                </span>
-                <div class="text">
-                  <h4>Don't be waiting for the vendor</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-12 text-center">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="content-left text-right wow fadeInLeft animated" data-wow-offset="10">
-              <div class="box-item left">
-                <span class="icon leftSide">
-                  <i class="fa"><img src="assets/img/features/pomato-notify.png"></i>
-                </span>
-                <div class="text">
-                  <h4>Get Notified on Vendor arrival</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="content-right text-left wow fadeInRight animated" data-wow-offset="10">
-              <div class="box-item right">
-                <span class="icon rightSide">
-                  <i class="fa"><img src="assets/img/features/pomato-bags.png"></i>
-                </span>
-                <div class="text">
-                  <h4>Don't let crowded Mandi and heavy bags ruin your day</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
- -->
+      
         <div class="col-md-12 text-center">
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -371,7 +346,7 @@ Desc: Pomato main Index.html, here all the
             <span class="icon rightSide">
               <i class="fa"><img src="assets/img/features/pomato-vendor.png"></i>
             </span>
-            <h4>Thela Vendor</h4>
+            <h4>Thela Vendors</h4>
           </div>
           <div class= "col-md-4 col-lg-4 col-sm-4 col-xs-12">
             <span class="icon rightSide">
@@ -383,7 +358,7 @@ Desc: Pomato main Index.html, here all the
             <span class="icon rightSide">
               <i class="fa"><img src="assets/img/features/pomato-shop.png"></i>
             </span>
-            <h4>Kirana Shop</h4>              
+            <h4>Kirana Shops</h4>              
           </div>
         </div>
 
@@ -413,10 +388,12 @@ Desc: Pomato main Index.html, here all the
                     <img src="assets/img/testimonial/uncle.jpg">
                   </div>
                   <div class="Desig">
-                    <h3>Data</h3>
+                    <h3>Sohan Kalsariya, VP Operations Interestship</h3>
                   </div>
                   <div class="message">
-                    <h2>Message</h2>
+                    <h2>
+                      I got lots of option with street vendors. Pomato offers me to choose from a lot of street vendors. I never thought convenience was for me before Pomato.
+                    </h2>
                   </div>
                 </div>  
               </div>
@@ -428,10 +405,13 @@ Desc: Pomato main Index.html, here all the
                     <img src="assets/img/testimonial/family.jpg">
                   </div>
                   <div class="Desig">
-                    <h3>Data</h3>
+                    <h3>Niharika Singh, Home-maker</h3>
                   </div>
                   <div class="message">
-                    <h2>Message</h2>
+                    <h2>
+                      Buying from super market was such a pain. Pomato is taking me back to thela-walas. Now I see why I switched in the first place.<br>
+                      There was no Pomato.
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -443,10 +423,13 @@ Desc: Pomato main Index.html, here all the
                     <img src="assets/img/testimonial/work-prof.jpg">
                   </div>
                   <div class="Desig">
-                    <h3>Data</h3>
+                    <h3>Reetu Srivastava, Sales Executive Gold's Gym</h3>
                   </div>
                   <div class="message">
-                    <h2>Message</h2>
+                    <h2>
+                      After a tiring day at work, going to mandi and buying fresh vegetables for my family was a big headace. Now I can call my own personal thela from Pomato.<br>
+                      Thank you for making my life simpler.
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -458,10 +441,13 @@ Desc: Pomato main Index.html, here all the
                     <img src="assets/img/testimonial/student.jpg">
                   </div>
                   <div class="Desig">
-                    <h3>Data</h3>
+                    <h3>Jyoti Jain, Student CA Final</h3>
                   </div>
                   <div class="message">
-                    <h2>Message</h2>
+                    <h2>
+                      Away from home my mom always keep telling me to buy more fruits. Now I just call the fruits thela and conveniently buy fruits.<br>
+                      My mom is definitely happier now cause of Pomato.
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -477,7 +463,7 @@ Desc: Pomato main Index.html, here all the
   </div>
   <!--footer ends here-->
   <script type="text/javascript">
-    // $('.carousel').carousel({
+    // $('#testimonialCarousel').carousel({
     //   interval: 10000;
     // });
     $('#testimonialCarousel .item').each(function(){
