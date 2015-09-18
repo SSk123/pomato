@@ -291,16 +291,17 @@ nav div p{
 }
 .iphone-app {
   padding-top: 5em;
-  width: 20em;
+  width: 20em;/*
   float: right;
+  text-align: center;*/
 }
 .or{
-  width: 15em;
+  /*width: 15em;*/
   text-align: center;
   border-bottom: 1px solid #e7e4da;
   line-height: 0.1em;
   margin-top: 4em;
-  margin-left: 4em;
+  /*margin-left: 9em;*/
 }
 .or span {
   background: #fff;
